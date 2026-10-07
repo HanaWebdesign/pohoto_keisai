@@ -1,0 +1,10 @@
+name = "soft-photo-api"
+main = "src/worker.js"
+compatibility_date = "2026-10-01"
+
+[vars]
+ALLOWED_ORIGIN = "https://YOUR-NAME.github.io"
+
+[[r2_buckets]]
+binding = "PHOTOS"
+bucket_name = "soft-photo-share"

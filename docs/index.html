@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow"><meta name="referrer" content="no-referrer">
+<meta name="theme-color" content="#f7e5ed">
+<title>ふわりフォト | 写真を、そっとおすそわけ</title>
+<link rel="stylesheet" href="style.css"><script src="config.js" defer></script><script src="app.js" defer></script>
+</head>
+<body>
+<header><a href="./" class="brand"><span class="brand-icon" aria-hidden="true">▧</span> ふわりフォト</a><span class="tagline">写真を、そっとおすそわけ</span></header>
+<main>
+<section id="composer">
+<div class="intro"><span class="eyebrow">A LITTLE PHOTO LETTER</span><h1>今日の一枚を、<br>やさしく届けよう。</h1><p>好きな写真を選んで、リンクを送るだけ。<br>見る人のログインは、いりません。</p></div>
+<div class="card upload-card">
+<div class="card-heading"><h2>写真のおすそわけ</h2><span class="pill">1〜4枚</span></div>
+<ol class="steps"><li>写真を選ぶ</li><li>確認する</li><li>リンクをコピー</li></ol>
+<div id="dropzone" class="dropzone"><div class="photo-symbol" aria-hidden="true">▧</div><h3>共有したい写真を選ぼう</h3><p>JPEG・PNG・WebP ／ 1枚8MBまで</p><button id="choose" class="primary" type="button">＋ 写真を選ぶ</button><p class="small">PCでは、ここにドラッグしても選べます</p><input id="files" type="file" accept="image/jpeg,image/png,image/webp,.jpg,.jpeg,.png,.webp" multiple hidden></div>
+<div class="preview-heading"><span>選択した写真 <strong id="count">0 / 4</strong></span><span class="small">× で取り消し</span></div>
+<div id="previews" class="grid" aria-label="投稿前の写真プレビュー"></div>
+<details id="auth"><summary>投稿・削除用の管理パスワード</summary><label for="password">自分だけの管理パスワード</label><input id="password" type="password" autocomplete="current-password" placeholder="設定したパスワードを入力"><p class="small">この画面を開いている間だけ使用します。閲覧者には不要です。</p></details>
+<button id="upload" class="primary wide" disabled>写真をアップロード</button><p class="small center">共有リンクを知っている人が写真を見られます。</p>
+</div>
+<section id="result" class="card" hidden><span class="eyebrow">READY TO SHARE</span><h2>写真のリンクができました</h2><p>ニコッとタウンの日記に貼ってね。</p><label for="shareUrl">共有URL</label><input id="shareUrl" readonly><div class="actions"><button id="copy" class="primary">URLをコピー</button><a id="open" class="secondary" target="_blank" rel="noopener">写真を見る ↗</a></div><button id="again" class="text-button">別の写真を投稿する</button></section>
+</section>
+<section id="viewer" hidden><div class="intro"><span class="eyebrow">A LITTLE PHOTO LETTER</span><h1>写真のおすそわけ</h1><p>写真をタップすると、大きく見られます。</p></div><div id="gallery" class="grid gallery"></div><details class="card management"><summary>投稿者の管理</summary><label for="deletePassword">管理パスワード</label><input id="deletePassword" type="password" autocomplete="current-password"><button id="delete" class="secondary wide">この投稿を削除</button></details></section>
+<p id="status" role="status" aria-live="polite" tabindex="-1"></p>
+</main><footer>ふわりフォト <span>小さな思い出、大切に。</span></footer>
+<dialog id="lightbox"><button id="close" autofocus aria-label="写真を閉じる">×</button><img id="large" alt="拡大した写真"></dialog>
+</body></html>
